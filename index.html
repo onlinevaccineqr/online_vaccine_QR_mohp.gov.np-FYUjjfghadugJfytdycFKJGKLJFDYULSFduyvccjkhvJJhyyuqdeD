@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="”robots”" content="”noindex”" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+<!-- Title and Icon here -->
+    <title>Digital Document of Covid-19 Vaccination Certificate</title>
+    <link
+      rel="shortcut icon"
+      href="https://vaccine.mohp.gov.np/fab/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="https://vaccine.mohp.gov.np/fab/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- script cdn of jquery to print window  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- local cssss -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/qr.css" />
+    <link rel="stylesheet" href="./css/table.css" />
+  </head>
+<!-- body here -->
+  <body oncontextmenu="return false">
+    <!-- print button div -->
+    <div class="container p-0">
+      <div class="print">
+        <button class="btn btn-sm btn-primary hide-on-print" id="print">
+          <i class="fas fa-print"></i>Print Certificate
+        </button>
+      </div>
+    </div>
+    <!-- whole table container -->
+    <div class="container page">
+        <!-- table header -->
+      <div class="row Header">
+        <div class="logo">
+          <img
+            width="120"
+            height="80"
+            class="img-responsive"
+            src="https://vaccine.mohp.gov.np/images/gov_logo.png"
+            alt=""
+          />
+        </div>
+        <div class="main-text">
+          <p>Federal Democratic Republic of Nepal</p>
+          <p class="mb-0">Ministry of Health and Population</p>
+          <p class="mb-0">(MoHP)</p>
+        </div>
+      </div>
+      <div class="certificate">
+        <p>COVID-19 Vaccination Certificate</p>
+      </div>
+      <div class="content-wrapper">
+        <div class="profile">
+          <img
+            id="rotater"
+            onclick="rotate(this)"
+            src="./public/src/image.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="main-content">
+          <div class="watermark">
+            <img
+              class="img-responsive watermark-image"
+              src="https://vaccine.mohp.gov.np/images/gov_logo.png"
+              alt=""
+            />
+          </div>
+          <div class="detail-info">
+            <div class="item">
+              <div class="item-detail">
+                <p><b>Full Name:</b></p>
+              </div>
+              <div class="item-detail">
+                <!-- name here on block -->
+                <p>SUMAN NEPALI</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-detail">
+                <p><b>Address:</b></p>
+              </div>
+              <div class="item-detail">
+                <!-- address here on block -->
+                <p>SINDHULI</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-detail">
+                <p><b>Nationality:</b></p>
+              </div>
+              <div class="item-detail">
+                <p>Nepal</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-detail">
+                <p><b>Date of Birth (DOB):</b></p>
+              </div>
+              <div class="item-detail">
+                <!-- dob here  -->
+                <p>1991-09-17</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-detail">
+                <p><b>Passport No. :</b></p>
+              </div>
+              <div class="item-detail">
+                <!-- passport number here -->
+                <p>BA0144363</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-detail mb-0">
+                <p><b>Registration ID:</b></p>
+              </div>
+              <div class="item-detail mb-0">
+                <!-- change reg id randomly -->
+                <p>4098-240616-51189P</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container">
+          <div class="item">
+            <div class="item-detail">
+              <h4>Vaccination Details:</h4>
+            </div>
+          </div>
+          <div class="item" style="max-width: 800px">
+            <div class="item-detail" style="width: 100%">
+              <div class="row">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="w-35" scope="col">Name of Vaccine</th>
+                      <th scope="col">Dose</th>
+                      <th scope="col">Vaccination Date</th>
+                      <th scope="col">Batch No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row" data-label="Name of Vaccine:">
+                        Janssen (Johnson & Johnson)
+                      </td>
+                      <td data-label="Dose:">1<sup>st</sup></td>
+                      <!-- vacc date  -->
+                      <td data-label="Vaccination Date:">18 Apr, 2023</td>
+                      <td data-label="Batch No.:">211H21A</td>
+                    </tr>
+                    <tr>
+                      <td scope="row" data-label="Name of Vaccine:">
+                        Janssen (Johnson & Johnson)
+                      </td>
+                      <td data-label="Dose:">Additional</td>
+                      <!-- second vacc date  -->
+                      <td data-label="Vaccination Date:">13 Apr, 2024</td>
+                      <td data-label="Batch No.:">211H21A</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- qr div here -->
+        <div class="qrimage" style="margin-bottom: 10px">
+          <img src="./public/src/qrcode.jpg" alt="qr" height="128" width="128" />
+        </div>
+      </div>
+      <hr class="footer-hr" />
+      <div class="footer">
+        <i
+          >This certificate was generated electronically by the Ministry of
+          Health and Population of Federal Democratic Republic of Nepal. And
+          does not require a stamp or signature.<br />
+          Any unauthorized manipulation of the document will be subject to legal
+          action as per laws of the Federal Democratic Republic of Nepal.</i
+        >
+      </div>
+    </div>
+  </body>
+  <script src="./js/print.js"></script>
+  <script src="./js/developerDisable.js"></script>
+</html>
